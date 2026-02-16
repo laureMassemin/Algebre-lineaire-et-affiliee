@@ -1,4 +1,5 @@
-from ..algebra_lineaire.vector import Vector
+from .vector import Vector
+
 class Matrix :
 
     # Build a matrix from dimensions or a list of lists.
@@ -65,7 +66,6 @@ class Matrix :
                 result.set_element(i, j, self.get_element(i, j) + other.get_element(i, j))
         return result
     
-
     # Subtract two matrices with the same dimensions.
     def __sub__(self,other):
         if not isinstance(other, Matrix):
